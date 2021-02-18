@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>GraffitiBoard</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style type="text/css">
+      .icon {
+        width: 2em;
+        height: 2em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="//at.alicdn.com/t/font_2375626_x0m6kpgwso.js"></script>
+
+    <canvas id="graffiti-board"></canvas>
+    <div class="color-group">
+      <ul>
+        <li
+          id="black"
+          class="color-item active"
+          style="background-color: black"
+        ></li>
+        <li id="red" class="color-item" style="background-color: #ff0000"></li>
+        <li
+          id="orange"
+          class="color-item"
+          style="background-color: #ffa500"
+        ></li>
+        <li
+          id="yellow"
+          class="color-item"
+          style="background-color: #ffff33"
+        ></li>
+        <li
+          id="green"
+          class="color-item"
+          style="background-color: #33cc66"
+        ></li>
+        <li id="blue" class="color-item" style="background-color: #0066ff"></li>
+        <li
+          id="indigo"
+          class="color-item"
+          style="background-color: #4b0080"
+        ></li>
+        <li
+          id="violet"
+          class="color-item"
+          style="background-color: #800080"
+        ></li>
+      </ul>
+    </div>
+
+    <div class="range-wrap">
+      <input
+        type="range"
+        id="range"
+        min="1"
+        max="30"
+        value="4"
+        title="调整笔刷粗细"
+      />
+    </div>
+
+    <div class="tools">
+      <button id="brush" class="active" title="画笔">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huabi"></use>
+        </svg>
+      </button>
+      <button id="eraser" title="橡皮擦">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-xiangpica"></use>
+        </svg>
+      </button>
+      <button id="clear" title="清空">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-qingkong"></use>
+        </svg>
+      </button>
+      <button id="undo" title="撤销">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chexiao"></use>
+        </svg>
+      </button>
+      <button id="download" title="保存">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-xiazai"></use>
+        </svg>
+      </button>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
